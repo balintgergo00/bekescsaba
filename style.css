@@ -43,10 +43,6 @@ header {
     align-items: center;
 }
 
-.logo span {
-    color: var(--secondary);
-}
-
 nav ul {
     display: flex;
     list-style: none;
