@@ -6,10 +6,10 @@
 }
 
 :root {
-    --primary: #4a6cf7;
-    --secondary: #6f42c1;
+    --primary: #588157;
+    --secondary: #344E41;
     --accent: #ff6b6b;
-    --light: #f8f9fa;
+    --light: #DAD7CD;
     --dark: #212529;
     --text: #333;
     --transition: all 0.3s ease;
@@ -82,7 +82,8 @@ nav ul li a:hover::after {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1515586838455-8f8f940d6853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1793&q=80') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.4)), url(assets/alap2.jpg) no-repeat center center/cover;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,8 +92,14 @@ nav ul li a:hover::after {
     color: white;
     padding: 0 20px;
 }
-
+/* .hero h1, .hero h2, .hero p {
+    backdrop-filter: blur(0.05vw);
+    background: rgba(0, 0, 0, 0.1);
+    padding: 15px 25px;
+    border-radius: 20px;
+} */
 .hero h1 {
+    /* backdrop-filter: blur(2px); */
     font-size: 3.5rem;
     margin-bottom: 20px;
     opacity: 0;
@@ -191,10 +198,12 @@ section {
     width: 100%;
     height: auto;
     transition: var(--transition);
+    transform: scale(1.05);
+
 }
 
 .history-image:hover img {
-    transform: scale(1.05);
+    transform: scale(1.10);
 }
 
 /* Attractions Section */
