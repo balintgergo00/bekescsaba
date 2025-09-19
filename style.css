@@ -415,7 +415,13 @@ section {
 .rendezvenyek-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.4)), url(assets/csabakolb.jpg) no-repeat center center/cover;
 }
-.col- {
+.szallas-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.4)), url(assets/IMG_1855-1920x990.jpg) no-repeat center center/cover;
+}
+.nevezetessegek-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.4)), url(assets/alap3.jpg) no-repeat center center/cover;
+}
+/* .col- {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 30px;
@@ -432,7 +438,7 @@ section {
     
     /* width: 100%; */
     /* column-count: 2; */
-}
+} */
 /* Active link style */
 nav ul li a.active {
     color: var(--primary);
