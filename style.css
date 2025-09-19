@@ -415,7 +415,24 @@ section {
 .rendezvenyek-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.4)), url(assets/csabakolb.jpg) no-repeat center center/cover;
 }
+.col- {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
+.row {
+    display: flex;
+    padding: 6vw 10%;
+    /* flex-wrap: wrap; */
+    /* margin: 0 -15px; */
+    
+    /* width: 100%; */
+    /* column-count: 2; */
+}
 /* Active link style */
 nav ul li a.active {
     color: var(--primary);
