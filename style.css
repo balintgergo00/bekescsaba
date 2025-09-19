@@ -412,6 +412,9 @@ section {
 .tortenet-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.4)), url(assets/regen.jpg) no-repeat center center/cover;
 }
+.rendezvenyek-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.4)), url(assets/csabakolb.jpg) no-repeat center center/cover;
+}
 
 /* Active link style */
 nav ul li a.active {
