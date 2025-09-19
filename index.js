@@ -45,3 +45,31 @@
         });
     });
 });
+
+
+// Animation on scroll for new elements
+function animateOnScroll() {
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    
+    elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        
+        if (elementPosition < screenPosition) {
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+        }
+    });
+}
+
+// Initialize elements with animation
+document.querySelectorAll('.animate-on-scroll').forEach(element => {
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(20px)';
+    element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+});
+
+// Add event listener for scroll
+window.addEventListener('scroll', animateOnScroll);
+// Initial check on page load
+window.addEventListener('load', animateOnScroll);

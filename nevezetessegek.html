@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Békéscsaba</title>
+    <title>Békéscsaba nevezetességei</title>
     <link rel="icon" href="assets/Bcs_kerek.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,16 +12,104 @@
 <body>
     <!-- Header -->
     <header>
-        <a href="#" class="logo">Békéscsaba</a>
+        <a href="index.html" class="logo">Békéscsaba</a>
         <nav>
             <ul>
                 <li><a href="tortenet.html">Története</a></li>
-                <li><a href="nevezetessegek.html">Nevezetességek</a></li>
+                <li><a href="nevezetessegek.html" class="active">Nevezetességek</a></li>
                 <li><a href="rendezvenyek.html">Rendezvények</a></li>
                 <li><a href="szallasok.html">Szállások</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.4)), url(assets/nevezetessegek_hero.jpg) no-repeat center center/cover;">
+        <h1>Békéscsaba <Font style="color: #A3B18A;">nevezetességei</Font></h1>
+        <h2>Fedezd fel a város csodáit</h2>
+        <p>Látogass el Békéscsaba legszebb épületeihez, múzeumaihoz és természeti csodáihoz.</p>
+    </section>
+
+    <!-- Attractions Content -->
+    <section>
+        <div class="section-title">
+            <h2>Látnivalók</h2>
+        </div>
+        
+        <div class="attractions-grid">
+            <div class="attraction-card animate-on-scroll">
+                <div class="attraction-image">
+                    <img src="assets/munkácsy_múzeum.jpg" alt="Munkácsy Mihály Múzeum">
+                </div>
+                <div class="attraction-info">
+                    <h3>Munkácsy Mihály Múzeum</h3>
+                    <p>A múzeum a világhírű festő, Munkácsy Mihály életművét mutatja be, valamint a térség régészeti és néprajzi emlékeit. Az állandó kiállítás mellett rendszeresen rendeznek időszaki kiállításokat is.</p>
+                    <p class="attraction-detail"><i class="fas fa-map-marker-alt"></i> Széchenyi tér 9.</p>
+                    <p class="attraction-detail"><i class="fas fa-clock"></i> Kedd-Vasárnap: 10-18 óra</p>
+                </div>
+            </div>
+            
+            <div class="attraction-card animate-on-scroll">
+                <div class="attraction-image">
+                    <img src="assets/szechenyi_ter.jpg" alt="Széchenyi tér">
+                </div>
+                <div class="attraction-info">
+                    <h3>Széchenyi tér</h3>
+                    <p>A város szívében található tér számos történelmi épülettel, parkosított területtel és hangulatos kávézókkal várja a látogatókat. A tér közepén álló Szentháromság-szobor 1777-ben készült.</p>
+                    <p class="attraction-detail"><i class="fas fa-tree"></i> Parkosított tér történelmi épületekkel</p>
+                    <p class="attraction-detail"><i class="fas fa-coffee"></i> Hangulatos kávézók és éttermek</p>
+                </div>
+            </div>
+            
+            <div class="attraction-card animate-on-scroll">
+                <div class="attraction-image">
+                    <img src="assets/evangelikus_templom.jpg" alt="Evangélikus nagytemplom">
+                </div>
+                <div class="attraction-info">
+                    <h3>Evangélikus nagytemplom</h3>
+                    <p>Az 1819-1823 között épült klasszicista stílusú templom a város egyik legszebb építészeti emléke. 54 méter magas tornya messziről látható, és impozáns orgonája rendszeresen hangversenyek helyszíne.</p>
+                    <p class="attraction-detail"><i class="fas fa-church"></i> Klasszicista stílusú templom</p>
+                    <p class="attraction-detail"><i class="fas fa-music"></i> Hangversenyek és kulturális események</p>
+                </div>
+            </div>
+            
+            <div class="attraction-card animate-on-scroll">
+                <div class="attraction-image">
+                    <img src="assets/andrassy_kastely.jpg" alt="Andrássy-kastély">
+                </div>
+                <div class="attraction-info">
+                    <h3>Andrássy-kastély</h3>
+                    <p>Az 1860-as években épült kastély a neves Andrássy család egykori rezidenciája volt. Ma múzeumként működik, és értékes bútorokat, festményeket és történelmi tárgyakat őriz.</p>
+                    <p class="attraction-detail"><i class="fas fa-landmark"></i> Történelmi kastély múzeummal</p>
+                    <p class="attraction-detail"><i class="fas fa-paint-brush"></i> Értékes műtárgyak és festmények</p>
+                </div>
+            </div>
+            
+            <div class="attraction-card animate-on-scroll">
+                <div class="attraction-image">
+                    <img src="assets/termaltó.jpg" alt="Békéscsabai Termáltó">
+                </div>
+                <div class="attraction-info">
+                    <h3>Békéscsabai Termáltó</h3>
+                    <p>A város szélén található termálfürdő gyógyhatású vize nemcsak a helyiek, hanem a turisták körében is nagy népszerűségnek örvend. A komplexum több medencével, szaunával és wellness részleggel rendelkezik.</p>
+                    <p class="attraction-detail"><i class="fas fa-swimmer"></i> Gyógyhatású termálvizes medencék</p>
+                    <p class="attraction-detail"><i class="fas fa-spa"></i> Wellness és szauna részleg</p>
+                </div>
+            </div>
+            
+            <div class="attraction-card animate-on-scroll">
+                <div class="attraction-image">
+                    <img src="assets/neprajzi_múzeum.jpg" alt="Néprajzi Múzeum">
+                </div>
+                <div class="attraction-info">
+                    <h3>Néprajzi Múzeum</h3>
+                    <p>A múzeum a helyi népi kultúra és hagyományok bemutatására szolgál. Látogatói megismerkedhetnek a régió népviseleteivel, hagyományaival és mindennapi életével a múlt századokból.</p>
+                    <p class="attraction-detail"><i class="fas fa-history"></i> Hagyományok és népviseletek</p>
+                    <p class="attraction-detail"><i class="fas fa-home"></i> Hagyományos paraszti berendezés</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="index.js"></script>
 </body>

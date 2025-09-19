@@ -92,14 +92,8 @@ nav ul li a:hover::after {
     color: white;
     padding: 0 20px;
 }
-/* .hero h1, .hero h2, .hero p {
-    backdrop-filter: blur(0.05vw);
-    background: rgba(0, 0, 0, 0.1);
-    padding: 15px 25px;
-    border-radius: 20px;
-} */
+
 .hero h1 {
-    /* backdrop-filter: blur(2px); */
     font-size: 3.5rem;
     margin-bottom: 20px;
     opacity: 0;
@@ -406,5 +400,319 @@ section {
     
     section {
         padding: 80px 5%;
+    }
+}
+
+
+
+
+
+/* proba */
+
+.tortenet-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.4)), url(assets/regen.jpg) no-repeat center center/cover;
+}
+
+/* Active link style */
+nav ul li a.active {
+    color: var(--primary);
+}
+
+nav ul li a.active::after {
+    width: 100%;
+}
+
+/* Timeline styles */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--primary);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 10px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-date {
+    padding: 8px 15px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.timeline-content {
+    padding: 20px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 4px solid var(--primary);
+    border-radius: 50%;
+    top: 15px;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd)::after {
+    right: -10px;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -10px;
+}
+
+/* History content */
+.history-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.history-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.history-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.history-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Attractions grid */
+.attractions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.attraction-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.attraction-card:hover {
+    transform: translateY(-5px);
+}
+
+.attraction-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.attraction-info {
+    padding: 20px;
+}
+
+.attraction-info h3 {
+    margin-top: 0;
+    color: var(--dark);
+}
+
+.attraction-detail {
+    margin: 8px 0;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* Events container */
+.events-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.event-item {
+    display: flex;
+    margin-bottom: 30px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: white;
+    padding: 20px;
+    min-width: 100px;
+}
+
+.event-date .day {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.event-date .month {
+    font-size: 1.2rem;
+}
+
+.event-info {
+    padding: 20px;
+    flex: 1;
+}
+
+.event-info h3 {
+    margin-top: 0;
+    color: var(--dark);
+}
+
+.event-detail {
+    margin: 8px 0;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* Annual events */
+.annual-events {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.annual-event {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.annual-event h3 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+/* Accommodation cards */
+.accommodation-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.accommodation-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accommodation-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.accommodation-info {
+    padding: 20px;
+}
+
+.accommodation-info h3 {
+    margin-top: 0;
+    color: var(--dark);
+}
+
+.rating {
+    color: #FFD700;
+    margin: 10px 0;
+}
+
+.accommodation-details {
+    margin: 15px 0;
+}
+
+.accommodation-details p {
+    margin: 8px 0;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .history-content {
+        flex-direction: column;
+    }
+    
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+        left: 0 !important;
+    }
+    
+    .timeline-item::after {
+        left: 21px !important;
+    }
+    
+    .event-item {
+        flex-direction: column;
+    }
+    
+    .event-date {
+        flex-direction: row;
+        justify-content: space-around;
+        min-width: auto;
     }
 }

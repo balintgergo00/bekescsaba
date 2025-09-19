@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Békéscsaba</title>
+    <title>Békéscsaba története</title>
     <link rel="icon" href="assets/Bcs_kerek.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
         <a href="index.html" class="logo">Békéscsaba</a>
         <nav>
             <ul>
-                <li><a href="tortenet.html">Története</a></li>
+                <li><a href="tortenet.html" class="active">Története</a></li>
                 <li><a href="nevezetessegek.html">Nevezetességek</a></li>
                 <li><a href="rendezvenyek.html">Rendezvények</a></li>
                 <li><a href="szallasok.html">Szállások</a></li>
@@ -23,22 +23,82 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>Békéscsaba története</h1>
-        <h2>Egy város története, mely a közápkorig nyúlik vissza</h2>
+    <!-- Hero Section -->
+    <section class="hero tortenet-hero">
+        <h1> <Font style="color: #A3B18A;">Békéscsaba</Font> története</h1>
+        <h2>Az idők sodrában</h2>
+        <p>Ismerd meg Békéscsaba gazdag múltját, a középkori kezdetektől a modern várossá válásig.</p>
     </section>
 
-    <section id="tortenet-oldal">
+    <!-- History Content -->
+    <section>
         <div class="section-title">
-            <h2>Története</h2>
+            <h2>A város múltja</h2>
         </div>
-        <div class="history-content">
         
+        <div class="history-content">
+            <div class="history-text">
+                <h3>Kezdetek</h3>
+                <p>Békéscsaba területe már az őskorban is lakott volt, amit a környéken talált régészeti leletek is bizonyítanak. A város nevét először 1330-ban említették írásos formában "Chaba" néven. A török hódoltság alatt a település elnéptelenedett, csak a 18. században kezdett újra életre kelni.</p>
+                
+                <h3>Újratelepülés és fejlődés</h3>
+                <p>1718-ban kezdődött meg a szervezett újratelepülés, főként szlovák és német jobbágyokkal. A 19. századra Békéscsaba jelentős mezőgazdasági és kereskedelmi központtá fejlődött, 1873-ban pedig városi rangot kapott. A vasút 1858-as megépülésével tovább gyorsult a fejlődés.</p>
+                
+                <h3>A 20. század</h3>
+                <p>Az 1900-as évek elején Békéscsaba már megyei jogú város volt. Az I. világháború után, 1923-ban lett Békés vármegye székhelye. A II. világháború után iparosodása felgyorsult, de megőrizte mezőgazdasági jellegét is.</p>
+                
+                <h3>Napjainkban</h3>
+                <p>Ma Békéscsaba modern város, amely megőrizte hangulatos belvárosát és gazdag néprajzi hagyományait. Fontos kulturális, oktatási és gazdasági központ, amely vonzza a turistákat és befektetőket egyaránt.</p>
+            </div>
+            
+            <div class="history-image animate-on-scroll">
+                <img src="assets/torteneti_kep.jpg" alt="Történelmi kép Békéscsabáról">
+            </div>
+        </div>
+        
+        <div class="timeline animate-on-scroll">
+            <div class="timeline-item">
+                <div class="timeline-date">1330</div>
+                <div class="timeline-content">
+                    <h3>Első írásos említés</h3>
+                    <p>A város "Chaba" néven jelenik meg az írott forrásokban</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">1718</div>
+                <div class="timeline-content">
+                    <h3>Újratelepülés</h3>
+                    <p>Szervezett újratelepülés kezdődik szlovák és német jobbágyokkal</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">1858</div>
+                <div class="timeline-content">
+                    <h3>Vasút megépülése</h3>
+                    <p>Megépül a vasúti összeköttetés, felgyorsulva a város fejlődését</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">1873</div>
+                <div class="timeline-content">
+                    <h3>Városi rang</h3>
+                    <p>Békéscsaba városi rangot kap</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">1923</div>
+                <div class="timeline-content">
+                    <h3>Megyeszékhely</h3>
+                    <p>Békéscsaba Békés vármegye székhelye lesz</p>
+                </div>
+            </div>
         </div>
     </section>
 
-
-
-<script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

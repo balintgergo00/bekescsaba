@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Békéscsaba</title>
+    <title>Békéscsaba rendezvényei</title>
     <link rel="icon" href="assets/Bcs_kerek.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,16 +12,133 @@
 <body>
     <!-- Header -->
     <header>
-        <a href="#" class="logo">Békéscsaba</a>
+        <a href="index.html" class="logo">Békéscsaba</a>
         <nav>
             <ul>
                 <li><a href="tortenet.html">Története</a></li>
                 <li><a href="nevezetessegek.html">Nevezetességek</a></li>
-                <li><a href="rendezvenyek.html">Rendezvények</a></li>
+                <li><a href="rendezvenyek.html" class="active">Rendezvények</a></li>
                 <li><a href="szallasok.html">Szállások</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.4)), url(assets/rendezvenyek_hero.jpg) no-repeat center center/cover;">
+        <h1>Békéscsaba <Font style="color: #A3B18A;">rendezvényei</Font></h1>
+        <h2>Éljen át felejthetetlen pillanatokat</h2>
+        <p>Városunk egész évben számos kulturális, zenei és gasztronómiai eseménnyel várja a látogatókat.</p>
+    </section>
+
+    <!-- Events Content -->
+    <section>
+        <div class="section-title">
+            <h2>Közelgő események</h2>
+        </div>
+        
+        <div class="events-container">
+            <div class="event-item animate-on-scroll">
+                <div class="event-date">
+                    <span class="day">15</span>
+                    <span class="month">Július</span>
+                </div>
+                <div class="event-info">
+                    <h3>Békéscsabai Szabadtéri Játékok</h3>
+                    <p>A város parkjában megrendezésre kerülő színházi és zenei fesztivál, amely helyi és nemzetközi előadókat vonultat fel. A programsorozat klasszikus színdaraboktól a modern előadóművészetig mindent felölel.</p>
+                    <p class="event-detail"><i class="fas fa-map-marker-alt"></i> Városi Park</p>
+                    <p class="event-detail"><i class="fas fa-clock"></i> 18:00 - 23:00</p>
+                </div>
+            </div>
+            
+            <div class="event-item animate-on-scroll">
+                <div class="event-date">
+                    <span class="day">20</span>
+                    <span class="month">Augusztus</span>
+                </div>
+                <div class="event-info">
+                    <h3>Csabai Kolbászfesztivál</h3>
+                    <p>Hagyományos kolbászkészítést bemutató, gasztronómiai fesztivál ízletes specialitásokkal és kulturális programokkal. A rendezvény híres nemzetközi vendégeiről és a csabai kolbász különleges ízéről.</p>
+                    <p class="event-detail"><i class="fas fa-map-marker-alt"></i> Széchenyi tér</p>
+                    <p class="event-detail"><i class="fas fa-clock"></i> 10:00 - 22:00</p>
+                </div>
+            </div>
+            
+            <div class="event-item animate-on-scroll">
+                <div class="event-date">
+                    <span class="day">10</span>
+                    <span class="month">Szeptember</span>
+                </div>
+                <div class="event-info">
+                    <h3>Békéscsabai Borfesztivál</h3>
+                    <p>Helyi bortermelők kínálatát bemutató esemény kóstolókkal, zenével és hangulatos környezettel. A fesztiválon hazai borvidékek legjobb termékei mellett gasztronómiai specialitások is megkóstolhatóak.</p>
+                    <p class="event-detail"><i class="fas fa-map-marker-alt"></i> Munkácsy Mihály Múzeum udvara</p>
+                    <p class="event-detail"><i class="fas fa-clock"></i> 14:00 - 20:00</p>
+                </div>
+            </div>
+            
+            <div class="event-item animate-on-scroll">
+                <div class="event-date">
+                    <span class="day">05</span>
+                    <span class="month">Október</span>
+                </div>
+                <div class="event-info">
+                    <h3>Őszi Fesztivál</h3>
+                    <p>A természet gyümölcseinek ünnepe kézműves termékekkel, hagyományos ősi receptekből készült ételekkel és italokkal. A fesztiválon népzenei koncertek és hagyományőrző programok is helyet kapnak.</p>
+                    <p class="event-detail"><i class="fas fa-map-marker-alt"></i> Városháza előtti tér</p>
+                    <p class="event-detail"><i class="fas fa-clock"></i> 10:00 - 18:00</p>
+                </div>
+            </div>
+            
+            <div class="event-item animate-on-scroll">
+                <div class="event-date">
+                    <span class="day">01</span>
+                    <span class="month">December</span>
+                </div>
+                <div class="event-info">
+                    <h3>Karácsonyi Vásár</h3>
+                    <p>Hagyományos karácsonyi vásár kézműves termékekkel, meleg forralt borral és hangulatos karácsonyi díszekkel. A adventi időszakban minden hétvégén speciális programokkal várják a látogatókat.</p>
+                    <p class="event-detail"><i class="fas fa-map-marker-alt"></i> Széchenyi tér</p>
+                    <p class="event-detail"><i class="fas fa-clock"></i> 14:00 - 20:00 (hétköznap), 10:00 - 20:00 (hétvégén)</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-title" style="margin-top: 80px;">
+            <h2>Éves rendezvények</h2>
+        </div>
+        
+        <div class="annual-events">
+            <div class="annual-event animate-on-scroll">
+                <h3>Január</h3>
+                <p>Újévi Koncertek, Téli Fesztivál</p>
+            </div>
+            
+            <div class="annual-event animate-on-scroll">
+                <h3>Február</h3>
+                <p>Farsangi Mulatság, Téli Vásár</p>
+            </div>
+            
+            <div class="annual-event animate-on-scroll">
+                <h3>Március</h3>
+                <p>Nemzetközi Nőnap Koncert, Tavaszi Vásár</p>
+            </div>
+            
+            <div class="annual-event animate-on-scroll">
+                <h3>Április</h3>
+                <p>Húsvéti Programok, Tavaszi Fesztivál</p>
+            </div>
+            
+            <div class="annual-event animate-on-scroll">
+                <h3>Május</h3>
+                <p>Május 1-i Ünnepség, Múzeumi Éjszaka</p>
+            </div>
+            
+            <div class="annual-event animate-on-scroll">
+                <h3>Június</h3>
+                <p>Nyári Bemutatók, Ifjúsági Fesztivál</p>
+            </div>
+        </div>
+    </section>
 
     <script src="index.js"></script>
 </body>
