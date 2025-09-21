@@ -170,13 +170,14 @@ section {
 
 /* History Section */
 .history-content {
-    display: flex;
     align-items: center;
-    gap: 50px;
 }
 
-.history-text {
-    flex: 1;
+.history-1,
+.history-2 {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
 }
 
 .history-image {
@@ -186,19 +187,30 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     opacity: 0;
     transform: translateX(50px);
+    display: flex;
+    align-items: stretch;
 }
 
-.history-image img {
+.history-content img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     transition: var(--transition);
     transform: scale(1.05);
-
+    display: block;
 }
 
 .history-image:hover img {
     transform: scale(1.10);
 }
+
+.history-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
 
 /* Attractions Section */
 .attractions-grid {
@@ -246,6 +258,10 @@ section {
     font-size: 1.5rem;
     margin-bottom: 10px;
     color: var(--primary);
+}
+
+#nevezetessegek{
+    background-color: rgb(246, 237, 228);
 }
 
 /* Events Section */
@@ -345,6 +361,9 @@ section {
     margin-bottom: 10px;
 }
 
+#szallasok{
+    background-color: rgb(246, 237, 228);
+}
 
 
 /* Animations */
