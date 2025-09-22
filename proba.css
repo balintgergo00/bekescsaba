@@ -2,12 +2,14 @@
     background-color: #F8F7F0;
     display: none ;
 }
-#szar {
-    /* visibility: hidden; */
-    display: none;
-
+html {
+  scroll-behavior: smooth;
 }
-#szar p {
+.eltunt {
+    display: none;
+    /* scroll-behavior: smooth; */
+}
+#szechenyiliget p {
     margin-bottom: 2vw;
     font-size:1vw;
 }

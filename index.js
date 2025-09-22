@@ -1,10 +1,18 @@
 function info(a) {
+        document.getElementById('munkacsymuzeum').style.display="none"
+        document.getElementById('szechenyiliget').style.display="none"
+        document.getElementById('kattemplom').style.display="none"
+        document.getElementById('wenckheim').style.display="none"
+        document.getElementById('arpadfurdo').style.display="none"
+        document.getElementById('csabapark').style.display="none"
+
+    
+
+
+
         document.getElementById('leiras').style.display="block"
         document.getElementById('bezar').style.display="block"
-
-    if (a == "ter") {
-        document.getElementById('szar').style.display="block"
-    }
+        document.getElementById(a).style.display="block"
 }
 function bezar(){
         document.getElementById('leiras').style.display="none"
