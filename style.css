@@ -673,7 +673,7 @@ nav ul li a.active::after {
 
 /* Accommodation cards */
 .accommodation-cards {
-    display: none;
+    display: flex;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 20px;
     max-width: 2000px;
