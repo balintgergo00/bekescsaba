@@ -261,7 +261,7 @@ section {
 }
 
 #nevezetessegek{
-    background-color: rgb(246, 237, 228);
+    background-color: #F8F7F0;
 }
 
 /* Events Section */
@@ -282,7 +282,7 @@ section {
 }
 
 .event-date {
-    min-width: 120px;
+    width: 120px;
     background: var(--primary);
     color: white;
     display: flex;
@@ -362,7 +362,7 @@ section {
 }
 
 #szallasok{
-    background-color: rgb(246, 237, 228);
+    background-color: #F8F7F0;
 }
 
 
@@ -402,6 +402,11 @@ section {
         min-width: auto;
         padding: 10px;
     }
+
+    .event-date{
+        width: 100%;
+        height: 100px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -420,13 +425,13 @@ section {
     section {
         padding: 80px 5%;
     }
+
 }
 
 
 
 
-
-/* proba */
+/* + */
 
 .tortenet-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.4)), url(assets/regen.jpg) no-repeat center center/cover;
@@ -440,24 +445,7 @@ section {
 .nevezetessegek-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.4)), url(assets/alap3.jpg) no-repeat center center/cover;
 }
-/* .col- {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
 
-.row {
-    display: flex;
-    padding: 6vw 10%;
-    /* flex-wrap: wrap; */
-    /* margin: 0 -15px; */
-    
-    /* width: 100%; */
-    /* column-count: 2; */
-} */
 /* Active link style */
 nav ul li a.active {
     color: var(--primary);
