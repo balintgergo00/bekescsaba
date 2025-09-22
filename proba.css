@@ -1,0 +1,21 @@
+#leiras {
+    background-color: #F8F7F0;
+    display: none ;
+}
+#szar {
+    /* visibility: hidden; */
+    display: none;
+
+}
+#szar p {
+    margin-bottom: 2vw;
+    font-size:1vw;
+}
+#bezar {
+    display: none;
+    transition: all 2s;
+    scroll-behavior: smooth;
+
+
+}
+

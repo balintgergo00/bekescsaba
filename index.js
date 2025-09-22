@@ -1,4 +1,15 @@
- // Scroll animation
+function info(a) {
+        document.getElementById('leiras').style.display="block"
+        document.getElementById('bezar').style.display="block"
+
+    if (a == "ter") {
+        document.getElementById('szar').style.display="block"
+    }
+}
+function bezar(){
+        document.getElementById('leiras').style.display="none"
+}
+// Scroll animation
  document.addEventListener('DOMContentLoaded', function() {
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     
