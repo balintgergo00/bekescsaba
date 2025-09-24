@@ -6,17 +6,21 @@ function info(a) {
         document.getElementById('arpadfurdo').style.display="none"
         document.getElementById('csabapark').style.display="none"
 
+        document.getElementById('videostop').pause();
     
-
-
 
         document.getElementById('leiras').style.display="block"
         document.getElementById('bezar').style.display="block"
         document.getElementById(a).style.display="block"
+        if(a=="arpadfurdo"){
+            document.getElementById('videostop').play();
+        }
 }
 function bezar(){
-        document.getElementById('leiras').style.display="none"
+        document.getElementById('leiras').style.display="none";
+        document.getElementById('videostop').pause();
 }
+
 // Scroll animation
  document.addEventListener('DOMContentLoaded', function() {
     const animatedElements = document.querySelectorAll('.animate-on-scroll');

@@ -10,7 +10,7 @@ html {
     display: none;
     /* scroll-behavior: smooth; */
 }
-#szechenyiliget p {
+#leiras p {
     margin-bottom: 2vw;
     font-size:1vw;
 }
@@ -44,8 +44,10 @@ html {
 #bezar {
     position: relative;
     text-decoration: none;
-    background-color: white;
-    color: black;
+    background-color: #799e78;
+
+
+    color: white;
     font-size: 0.7vw;
     border-radius: 1vw;
     top: -1vw;
@@ -55,6 +57,12 @@ html {
     box-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.2);
     transition: none;
 
+}
+#bezar:hover {
+    background-color: #5c7a5f;
+    box-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.4);
+
+    
 }
 
 .gomb:hover {
