@@ -651,7 +651,7 @@ nav ul li a.active::after {
 /* Annual events */
 .annual-events {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -747,5 +747,9 @@ nav ul li a.active::after {
         flex-direction: row;
         justify-content: space-around;
         min-width: auto;
+    }
+
+    .annual-events {
+        grid-template-columns: repeat(2, 1fr); /* tablet: 2 oszlop */
     }
 }
