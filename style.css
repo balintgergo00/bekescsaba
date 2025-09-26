@@ -703,12 +703,19 @@ nav ul li a.active::after {
 
 .accommodation-details {
     margin: 15px 0;
+    padding-bottom: 50px;
 }
 
 .accommodation-details p {
     margin: 8px 0;
     color: var(--gray);
     font-size: 0.9rem;
+}
+
+.accommodation-cards .cta-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
 }
 
 /* Responsive styles */
