@@ -712,10 +712,27 @@ nav ul li a.active::after {
     font-size: 0.9rem;
 }
 
-.accommodation-cards .cta-button {
+.accommodation-cards .foglalas-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    display: inline-block;
+    padding: 15px 30px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: var(--transition);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards 1.4s;
+}
+
+.foglalas-button:hover {
+    background: var(--secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive styles */
