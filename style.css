@@ -282,7 +282,7 @@ section {
 }
 
 .event-date {
-    width: 120px;
+    width: 130px;
     background: var(--primary);
     color: white;
     display: flex;
