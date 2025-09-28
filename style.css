@@ -212,20 +212,15 @@ section {
 
 
 /* Attractions Section */
-.attractions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+#nevezetessegek .attractions-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
 
-.attraction-card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-    opacity: 0;
-    transform: translateY(50px);
+@media screen and (max-width: 768px) {
+    #nevezetessegek .attractions-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .attraction-card:hover {
@@ -234,9 +229,9 @@ section {
 }
 
 .attraction-image {
-    height: 200px;
-    overflow: hidden;
-}
+        height: 200px;
+        overflow: hidden;
+    }
 
 .attraction-image img {
     width: 100%;
@@ -310,8 +305,14 @@ section {
 /* Accommodation Section */
 .accommodation-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
+}
+
+@media screen and (max-width: 1050px) {
+    .accommodation-cards {
+        grid-template-columns: 1fr;
+    }
 }
 
 .accommodation-card {
@@ -412,6 +413,8 @@ section {
     nav ul {
         display: none;
     }
+
+    
     
     .hero h1 {
         font-size: 2.5rem;
@@ -534,6 +537,50 @@ nav ul li a.active::after {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+
+@media (max-width: 900px) {
+    .history-content {
+        flex-direction: column;
+        gap: 30px;
+        padding: 15px;
+    }
+    .history-1, .history-2 {
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 40px;
+    }
+    .history-text, .history-image {
+        min-width: 0;
+        width: 100%;
+        flex: unset;
+    }
+    .history-image img {
+        height: auto;
+        min-height: 180px;
+        max-height: 320px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 600px) {
+    .history-content {
+        padding: 8px;
+        gap: 18px;
+    }
+    .history-1, .history-2 {
+        gap: 14px;
+        margin-bottom: 24px;
+    }
+    .history-text {
+        font-size: 1rem;
+        padding: 0 2px;
+    }
+    .history-image img {
+        min-height: 120px;
+        max-height: 180px;
+        border-radius: 6px;
+    }
 }
 
 .history-text {
@@ -672,6 +719,11 @@ nav ul li a.active::after {
 
 /* Accommodation cards */
 
+.accommodation-cards-page {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
 
 .accommodation-card {
     background: white;
@@ -736,10 +788,6 @@ nav ul li a.active::after {
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
-    .history-content {
-        flex-direction: column;
-    }
-    
     .timeline::after {
         left: 31px;
     }
@@ -952,4 +1000,3 @@ nav ul li a.active::after {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-
