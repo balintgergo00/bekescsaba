@@ -727,6 +727,117 @@ nav ul li a.active::after {
     font-size: 0.9rem;
 }
 
+#leiras {
+    background-color: #F8F7F0;
+    display: none ;
+    text-align: justify;
+}
+html {
+  scroll-behavior: smooth;
+}
+.eltunt {
+    display: none;
+    /* scroll-behavior: smooth; */
+}
+#leiras p {
+    margin-bottom: 2vw;
+    font-size: 1rem;
+}
+#bezar {
+    display: none;
+    transition: all 2s;
+    /* scroll-behavior: smooth; */
+
+
+}
+.attraction-info {
+    /* position: relative; */
+    padding-bottom: 5vw;
+}
+.gomb {
+    cursor: pointer;
+    background-color: #799e78;
+    border: none;
+    font-size:20px;
+    padding: 10px 15px;
+    border-radius: 30%;
+    box-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.2);
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    display:default;
+    position:absolute;
+    bottom: 15px;
+    right: 15px;
+}
+#bezar {
+    position: relative;
+    text-decoration: none;
+    background-color: #799e78;
+    color: white;
+    font-size:16px;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    width: 80px;
+    padding: 5px 18px;
+    box-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.2);
+    transition: none;
+
+}
+#bezar:hover {
+    background-color: #5c7a5f;
+    box-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.4);
+
+    
+}
+
+.gomb:hover {
+    background-color: #5c7a5f;
+    
+}
+.kep_ {
+    width: 300px;
+    margin-bottom: 2vw;
+    object-fit: cover;
+    border: #A3B18A solid 0.3vw; 
+    padding: 0.4vw;
+    border-radius: 1vw;
+}
+
+.jobb {
+    margin-left: 2vw;
+
+    float: right;
+}
+.bal {
+    margin-right: 2vw;
+
+    float: left;
+}
+
+@media screen and (max-width: 1200px) {
+    .kep_ {
+        width: 250px;
+        max-width: 250px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .jobb, .bal {
+        float: none;
+        display: block;
+        margin: 0 auto 2vw auto;
+    }
+    .kep_ {
+        width: 80%;
+        max-width: 300px;
+    }
+    
+}
+
+
 /* Events container */
 .events-container {
     max-width: 800px;
