@@ -14,18 +14,34 @@
 </head>
 
 <body>
-    <!-- Header -->
+<!-- Header -->
     <header>
         <a href="index.html" class="logo">Békéscsaba</a>
-        <nav>
+        <nav class="desktop-nav">
             <ul>
                 <li><a href="tortenet.html">Történelme</a></li>
-                <li><a href="nevezetessegek.html" class="active">Nevezetességek</a></li>
+                <li><a href="nevezetessegek.html">Nevezetességek</a></li>
                 <li><a href="rendezvenyek.html">Rendezvények</a></li>
                 <li><a href="szallasok.html">Szállások</a></li>
             </ul>
         </nav>
+
+        <!-- mobile menu -->
+         <button class="mobile-toggle" id="mobileToggle">
+            <i class="fas fa-bars"></i>
+         </button>
     </header>
+
+    <!-- mobile nav -->
+     <nav class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="tortenet.html">Történelme</a></li>
+            <li><a href="nevezetessegek.html">Nevezetességek</a></li>
+            <li><a href="rendezvenyek.html">Rendezvények</a></li>
+            <li><a href="szallasok.html">Szállások</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
 
     <!-- Hero Section -->
     <section class="hero nevezetessegek-hero">

@@ -81,3 +81,50 @@ document.querySelectorAll('.animate-on-scroll').forEach(element => {
 window.addEventListener('scroll', animateOnScroll);
 // Initial check on page load
 window.addEventListener('load', animateOnScroll);
+
+
+
+// Mobile menu functionality
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+        
+        mobileToggle.addEventListener('click', function() {
+            mobileNav.classList.toggle('active');
+            mobileNavOverlay.classList.toggle('active');
+            
+            // Change icon based on menu state
+            const icon = mobileToggle.querySelector('i');
+            if (mobileNav.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close mobile menu when clicking on overlay
+        mobileNavOverlay.addEventListener('click', function() {
+            mobileNav.classList.remove('active');
+            mobileNavOverlay.classList.remove('active');
+            
+            // Reset icon
+            const icon = mobileToggle.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileNav.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileNav.classList.remove('active');
+                mobileNavOverlay.classList.remove('active');
+                
+                // Reset icon
+                const icon = mobileToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
