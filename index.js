@@ -21,41 +21,7 @@ function bezar(){
         document.getElementById('videostop').pause();
 }
 
-// Scroll animation
- document.addEventListener('DOMContentLoaded', function() {
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-    
-    animatedElements.forEach(element => {
-        observer.observe(element);
-    });
-
-    
-    // Smooth scrolling for CTA button
-    document.querySelector('.cta-button').addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        
-        window.scrollTo({
-            top: targetSection.offsetTop - 80,
-            behavior: 'smooth'
-        });
-    });
-});
-
-
-// Animation on scroll for new elements
+// Animation on scroll
 function animateOnScroll() {
     const elements = document.querySelectorAll('.animate-on-scroll');
     
@@ -70,6 +36,8 @@ function animateOnScroll() {
     });
 }
 
+
+
 // Initialize elements with animation
 document.querySelectorAll('.animate-on-scroll').forEach(element => {
     element.style.opacity = '0';
@@ -81,6 +49,9 @@ document.querySelectorAll('.animate-on-scroll').forEach(element => {
 window.addEventListener('scroll', animateOnScroll);
 // Initial check on page load
 window.addEventListener('load', animateOnScroll);
+
+
+
 
 
 
@@ -129,107 +100,6 @@ window.addEventListener('load', animateOnScroll);
             });
         });
 
-
-
-// Galéria képek adatai
-        const galleryImages = [
-            {
-                src: "assets/arcanum.jpg",
-                title: "Arcanum Hotel",
-                description: "A város egyik legnépszerűbb szállodája"
-            },
-            {
-                src: "assets/Munkacsy hotel.jpg",
-                title: "Munkácsy Hotel",
-                description: "A Széchenyi liget szívében"
-            },
-            {
-                src: "assets/IMG_1855-1920x990.jpg",
-                title: "Fiume Hotel",
-                description: "Modern apartmanok a belvárosban"
-            },
-            {
-                src: "assets/fenyveshotel.jpg",
-                title: "Fenyves Hotel",
-                description: "Csendes környezet a város szélén"
-            },
-            {
-                src: "assets/vendeghaz.jpg",
-                title: "Resident Wellness",
-                description: "Hagyományos vendégház medencével"
-            },
-            {
-                src: "assets/sport hotel.jpg",
-                title: "Sport Hotel",
-                description: "Modern hotel a sportcsarnok mellett"
-            },
-            {
-                src: "assets/alap2.jpg",
-                title: "Békéscsaba panoráma",
-                description: "A város lenyűgöző látképe"
-            },
-            {
-                src: "assets/alap3.jpg",
-                title: "Városközpont",
-                description: "Békéscsaba élénk központja"
-            }
-        ];
-
-        let currentImageIndex = 0;
-
-        // Lightbox megnyitása
-        function openLightbox(index) {
-            currentImageIndex = index;
-            updateLightbox();
-            document.getElementById('lightbox').style.display = 'flex';
-            document.body.style.overflow = 'hidden'; // Scroll letiltása
-        }
-
-        // Lightbox bezárása
-        function closeLightbox() {
-            document.getElementById('lightbox').style.display = 'none';
-            document.body.style.overflow = 'auto'; // Scroll engedélyezése
-        }
-
-        // Kép váltása a lightboxban
-        function changeImage(direction) {
-            currentImageIndex += direction;
-            
-            // Ciklikus váltás
-            if (currentImageIndex >= galleryImages.length) {
-                currentImageIndex = 0;
-            } else if (currentImageIndex < 0) {
-                currentImageIndex = galleryImages.length - 1;
-            }
-            
-            updateLightbox();
-        }
-
-        // Lightbox tartalmának frissítése
-        function updateLightbox() {
-            const image = galleryImages[currentImageIndex];
-            document.getElementById('lightbox-img').src = image.src;
-            document.getElementById('lightbox-title').textContent = image.title;
-            document.getElementById('lightbox-desc').textContent = image.description;
-        }
-
-        // ESC billentyűvel is bezárható a lightbox
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeLightbox();
-            } else if (event.key === 'ArrowLeft') {
-                changeImage(-1);
-            } else if (event.key === 'ArrowRight') {
-                changeImage(1);
-            }
-        });
-
-        // Kattintás a lightbox háttérére is bezárja
-        document.getElementById('lightbox').addEventListener('click', function(event) {
-            if (event.target === this) {
-                closeLightbox();
-            }
-        });
 
 // --- Rendezvenyek.html gallery lightbox ---
 document.addEventListener('DOMContentLoaded', function() {
