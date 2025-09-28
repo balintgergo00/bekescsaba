@@ -128,3 +128,170 @@ window.addEventListener('load', animateOnScroll);
                 icon.classList.add('fa-bars');
             });
         });
+
+
+
+// Galéria képek adatai
+        const galleryImages = [
+            {
+                src: "assets/arcanum.jpg",
+                title: "Arcanum Hotel",
+                description: "A város egyik legnépszerűbb szállodája"
+            },
+            {
+                src: "assets/Munkacsy hotel.jpg",
+                title: "Munkácsy Hotel",
+                description: "A Széchenyi liget szívében"
+            },
+            {
+                src: "assets/IMG_1855-1920x990.jpg",
+                title: "Fiume Hotel",
+                description: "Modern apartmanok a belvárosban"
+            },
+            {
+                src: "assets/fenyveshotel.jpg",
+                title: "Fenyves Hotel",
+                description: "Csendes környezet a város szélén"
+            },
+            {
+                src: "assets/vendeghaz.jpg",
+                title: "Resident Wellness",
+                description: "Hagyományos vendégház medencével"
+            },
+            {
+                src: "assets/sport hotel.jpg",
+                title: "Sport Hotel",
+                description: "Modern hotel a sportcsarnok mellett"
+            },
+            {
+                src: "assets/alap2.jpg",
+                title: "Békéscsaba panoráma",
+                description: "A város lenyűgöző látképe"
+            },
+            {
+                src: "assets/alap3.jpg",
+                title: "Városközpont",
+                description: "Békéscsaba élénk központja"
+            }
+        ];
+
+        let currentImageIndex = 0;
+
+        // Lightbox megnyitása
+        function openLightbox(index) {
+            currentImageIndex = index;
+            updateLightbox();
+            document.getElementById('lightbox').style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Scroll letiltása
+        }
+
+        // Lightbox bezárása
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Scroll engedélyezése
+        }
+
+        // Kép váltása a lightboxban
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            
+            // Ciklikus váltás
+            if (currentImageIndex >= galleryImages.length) {
+                currentImageIndex = 0;
+            } else if (currentImageIndex < 0) {
+                currentImageIndex = galleryImages.length - 1;
+            }
+            
+            updateLightbox();
+        }
+
+        // Lightbox tartalmának frissítése
+        function updateLightbox() {
+            const image = galleryImages[currentImageIndex];
+            document.getElementById('lightbox-img').src = image.src;
+            document.getElementById('lightbox-title').textContent = image.title;
+            document.getElementById('lightbox-desc').textContent = image.description;
+        }
+
+        // ESC billentyűvel is bezárható a lightbox
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeLightbox();
+            } else if (event.key === 'ArrowLeft') {
+                changeImage(-1);
+            } else if (event.key === 'ArrowRight') {
+                changeImage(1);
+            }
+        });
+
+        // Kattintás a lightbox háttérére is bezárja
+        document.getElementById('lightbox').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeLightbox();
+            }
+        });
+
+// --- Rendezvenyek.html gallery lightbox ---
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryItems = document.querySelectorAll('.gallery-container .gallery-image');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const imageCounter = document.getElementById('imageCounter');
+    let currentIndex = 0;
+
+    if (galleryItems.length && lightbox && lightboxImage) {
+        function showLightbox(index) {
+            currentIndex = index;
+            lightboxImage.src = galleryItems[index].src;
+            lightboxImage.alt = galleryItems[index].alt;
+            imageCounter.textContent = `${index + 1} / ${galleryItems.length}`;
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        galleryItems.forEach((img, idx) => {
+            img.addEventListener('click', () => showLightbox(idx));
+        });
+
+        document.getElementById('lightboxClose').onclick = function() {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        };
+
+        document.getElementById('lightboxPrev').onclick = function(e) {
+            e.stopPropagation();
+            currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+            showLightbox(currentIndex);
+        };
+
+        document.getElementById('lightboxNext').onclick = function(e) {
+            e.stopPropagation();
+            currentIndex = (currentIndex + 1) % galleryItems.length;
+            showLightbox(currentIndex);
+        };
+
+        // Close on background click
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (lightbox.style.display === 'flex') {
+                if (e.key === 'Escape') {
+                    lightbox.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                } else if (e.key === 'ArrowLeft') {
+                    currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+                    showLightbox(currentIndex);
+                } else if (e.key === 'ArrowRight') {
+                    currentIndex = (currentIndex + 1) % galleryItems.length;
+                    showLightbox(currentIndex);
+                }
+            }
+        });
+    }
+});
