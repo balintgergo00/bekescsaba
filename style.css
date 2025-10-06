@@ -40,12 +40,12 @@ header {
     text-decoration: none;
     display: flex;
     align-items: center;
-    transition: transform 1000s ease;
+    transition: transform 10s ease;
 
 }
 
 .logo:hover {
-    transform: rotate(3600000deg);
+    transform: rotate(36000deg);
 }
 
 /* deskstop navigation */
