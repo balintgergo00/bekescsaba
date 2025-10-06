@@ -42,6 +42,11 @@ header {
     align-items: center;
 }
 
+.logo:hover {
+    transform: rotate(360deg);
+    transition: transform 2s ease;
+}
+
 /* deskstop navigation */
 
 .desktop-nav ul {
@@ -339,6 +344,11 @@ section {
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+
+.events-container:hover{
+    transform: skew(-5deg);
+    transition: var(--transition);
 }
 
 .event-item {
